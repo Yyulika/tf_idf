@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block content %}
+<h2>Upload</h2>
+<form method="post" enctype="multipart/form-data">
+{% csrf_token %}
+<input type="file" name="document">
+<button type="submit">Upload File</button>
+</form>
+{{table|safe}}
+{% endblock %}
+</body>
+</html>
